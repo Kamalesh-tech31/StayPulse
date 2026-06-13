@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Environment Variables
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Model Artifacts (OPTIONAL)
+# Uncomment if you don't want to push trained models
+# ml_backend/models/*.pkl
+# ml_backend/models/*.joblib
+
+# Data Files (OPTIONAL)
+# Uncomment if datasets are large and shouldn't be committed
+# data/*.csv
+# data/*.xlsx
+
+# Generated Prediction Files
+predictions.csv
+output.csv
+results.csv
+
+# Cache
+.cache/
+
+# Local Database
+*.db
+*.sqlite3
+
+# System Files
+*.swp
+*.swo
+
+models/
