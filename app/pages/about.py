@@ -2,12 +2,11 @@ import streamlit as st
 
 
 def render_about():
-
-    st.title("About StayPulse")
+    st.title("About")
+    st.subheader("Learn about StayPulse and the machine learning models behind it")
+    st.markdown("---")
 
     st.markdown("""
-    ## Customer Churn Prediction Platform
-
     StayPulse is an AI-powered customer retention analytics platform.
 
     ### Features

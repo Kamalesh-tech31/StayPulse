@@ -20,13 +20,6 @@ except Exception:
 
 from ml_backend.predictor import predict_dataset, get_model_feature_importance
 
-
-st.set_page_config(page_title="Churn Dashboard", layout="wide")
-
-st.title("Executive Churn Dashboard")
-
-st.markdown("This dashboard loads the canonical dataset, runs batch predictions via the backend, and displays executive metrics.")
-
 DATA_PATH = "dataset/Churn_Modelling.csv"
 
 @st.cache_data(show_spinner=False)
@@ -38,7 +31,15 @@ def safe_run_predictions(df: pd.DataFrame) -> pd.DataFrame:
     return predict_dataset(df)
 
 
-def main():
+def render_dashboard():
+    st.title("Dashboard")
+    st.subheader("Executive KPIs and Customer Risk Overview")
+    st.markdown("---")
+
+    st.markdown(
+        "This dashboard loads the canonical dataset, runs batch predictions via the backend, and displays executive metrics."
+    )
+
     try:
         df = load_data(DATA_PATH)
     except Exception as e:
@@ -122,6 +123,11 @@ def main():
 
     else:
         st.info("Click 'Run predictions on dataset' to generate the dashboard metrics.")
+
+
+def main():
+    st.set_page_config(page_title="Churn Dashboard", layout="wide")
+    render_dashboard()
 
 
 if __name__ == "__main__":
